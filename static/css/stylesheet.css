@@ -1,0 +1,11 @@
+@import url('https://googleapis.com');
+@import url('https://db.onlinewebfonts.com/c/ec478fc73747085c0b7028c642d992b1?family=Aller+Bold+V1');
+
+body{
+    font-family: "JetBrains Mono",monospace;
+}
+.container{
+    display: grid;
+    justify-content: center;
+    padding: 10%;
+}

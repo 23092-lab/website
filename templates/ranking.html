@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Aura rankings</title>
+    <link rel="stylesheet" href="/static/css/stylesheet.css">
 </head>
 <body>
-<table>
+<div class="container">
+<table><th>number</th> <th>name</th> <th>ranking</th> <th>level</th>
     {% for rank in ranks %}
     <tr>
         <th>{{ rank[0] }}</th>
@@ -15,5 +17,6 @@
     </tr>
     {% endfor %}
 </table>
+</div>
 </body>
 </html>
