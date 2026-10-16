@@ -22,7 +22,7 @@ def render_home():
 
 @app.route('/ranking')
 def render_webpages():
-    query = "SELECT id,name,ranking,aura,active from ranks"
+    query = "SELECT id,name,ranking,aura,active,country from ranks"
     con = create_connection(DATABASE)
     cur = con.cursor()
     cur.execute(query)
@@ -36,7 +36,7 @@ def render_webpages():
 def render_search():
     search = request.form['search']
     search = "%" + search + "%"
-    query = "SELECT name, ranking, aura, active FROM ranks WHERE name like ? OR ranking like ? OR active like ? OR " \
+    query = "SELECT name, ranking, aura, active, country FROM ranks WHERE name like ? OR ranking like ? OR active like ? OR " \
             "aura like ?"
     con = create_connection(DATABASE)
     cur = con.cursor()

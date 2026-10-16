@@ -3,9 +3,47 @@
 
 body{
     font-family: "JetBrains Mono",monospace;
+    color:white;
 }
 .container{
+    background: rgba(255, 228, 196, 0);
     display: grid;
     justify-content: center;
     padding: 10%;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: grey;
+    text-decoration:none;
+}
+th{
+    text-decoration: none;
+    font-weight: normal;
+    font-family: "JetBrains Mono", monospace;
+}
+tr{
+    font-weight: normal;
+    text-decoration: none;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.top{
+    border: 2px solid white;
+    padding: 6px 12px;
+}
+.parallax {
+  /* The image used */
+  background-image: url("https://i1.sndcdn.com/artworks-000245294642-gnfq32-t1080x1080.jpg");
+    padding:0px;
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

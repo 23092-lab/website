@@ -6,17 +6,24 @@
     <link rel="stylesheet" href="/static/css/stylesheet.css">
 </head>
 <body>
+<div class="parallax">
+
 <div class="container">
-<table><th>number</th> <th>name</th> <th>ranking</th> <th>level</th>
+<a href="/">back</a>
+    <table><th class="top">number</th> <th class="top">name</th> <th class="top">ranking</th> <th class="top">level</th> <th class="top">country</th>
     {% for rank in ranks %}
     <tr>
         <th>{{ rank[0] }}</th>
         <th>{{ rank[1] }}</th>
         <th>{{ rank[2] }}</th>
         <th>{{ rank[3] }}</th>
+        <th>{{ rank[4] }}</th>
+
     </tr>
     {% endfor %}
 </table>
+</div>
+
 </div>
 </body>
 </html>
