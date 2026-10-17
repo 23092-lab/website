@@ -8,11 +8,31 @@
 <body>
 
     <div class="container">
-        <a href="/ranking">rankings</a>
+        <a href="/ranking">All rankings</a>
+        <br>
+        <br>
+        <br>
+         Search the database (with or without country):
         <form method="post" action="/search">
-        <input type="text" name="search" id="search">
-        <input type="submit" value="search">
-    </form>
+                <select name="country" id="country">
+                    <option value="">All Countries</option>
+                    <option value="🇰🇷">South Korea 🇰🇷</option>
+                    <option value="🇨🇦">Canada 🇨🇦</option>
+                    <option value="🇵🇭">Philippines 🇵🇭</option>
+                    <option value="🇦🇺">Australia 🇦🇺</option>
+                    <option value="🇺🇸">United States 🇺🇸</option>
+                    <option value="🇹🇼">Taiwan 🇹🇼</option>
+                    <option value="🇵🇱">Poland🇵🇱</option>
+                    <option value="🇩🇪">Germany 🇩🇪</option>
+                </select>
+            <select name="sort" id="sort">
+                 <option value="asc">Ascending popularity</option>
+                <option value="desc">Descending popularity</option>
+            </select>
+            <br>
+            <input type="text" name="search" id="search">
+            <input type="submit" value="search">
+        </form>
     </div>
 </body>
 </html>

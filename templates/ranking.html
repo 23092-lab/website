@@ -6,11 +6,10 @@
     <link rel="stylesheet" href="/static/css/stylesheet.css">
 </head>
 <body>
-<div class="parallax">
 
 <div class="container">
-<a href="/">back</a>
-    <table><th class="top">number</th> <th class="top">name</th> <th class="top">ranking</th> <th class="top">level</th> <th class="top">country</th>
+<a href="/">Back to search</a>
+    <table><th class="top">name</th> <th class="top">popularity</th> <th class="top">aura levels</th> <th class="top">active</th> <th class="top">country</th>
     {% for rank in ranks %}
     <tr>
         <th>{{ rank[0] }}</th>
@@ -22,8 +21,6 @@
     </tr>
     {% endfor %}
 </table>
-</div>
-
 </div>
 </body>
 </html>

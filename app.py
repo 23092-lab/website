@@ -22,7 +22,7 @@ def render_home():
 
 @app.route('/ranking')
 def render_webpages():
-    query = "SELECT id,name,ranking,aura,active,country from ranks"
+    query = "SELECT name,ranking,aura,active,country from ranks"
     con = create_connection(DATABASE)
     cur = con.cursor()
     cur.execute(query)
@@ -34,13 +34,27 @@ def render_webpages():
 
 @app.route('/search',methods=['GET','POST'])
 def render_search():
-    search = request.form['search']
+    search = request.form.get('search','')
+    country = request.form.get('country','')
+    sort = request.form.get('sort','')
+
     search = "%" + search + "%"
-    query = "SELECT name, ranking, aura, active, country FROM ranks WHERE name like ? OR ranking like ? OR active like ? OR " \
-            "aura like ?"
+    query = ("SELECT name, ranking, aura, active, country FROM ranks "
+             "WHERE (name LIKE ? OR ranking LIKE ? OR active LIKE ? OR aura LIKE ?)")
+
+    params = [search,search,search,search]
+    if country:
+        query += " AND country = ?"
+        params.append(country)
+    
+    if sort == 'desc':
+        query += " ORDER BY CAST(ranking AS INTEGER) DESC"
+    else:
+        query += " ORDER BY CAST(ranking AS INTEGER) ASC"
+
     con = create_connection(DATABASE)
     cur = con.cursor()
-    cur.execute(query, (search,search,search,search))
+    cur.execute(query, tuple(params))
     ranking_list = cur.fetchall()
     con.close()
     return render_template("ranking.html", ranks=ranking_list)
