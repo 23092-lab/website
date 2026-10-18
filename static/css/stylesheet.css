@@ -2,11 +2,11 @@
 @import url('https://db.onlinewebfonts.com/c/ec478fc73747085c0b7028c642d992b1?family=Aller+Bold+V1');
 
 body{
-    background-image: 'bg.jpeg';
+    background-image: url("https://raw.githubusercontent.com/23092-lab/website/refs/heads/main/static/bg.jpeg");
     background-size: cover;
     font-family: "JetBrains Mono",monospace;
     color:white;
-    font-size: 150%;
+    font-size: 200%;
 }
 .container{
     background: rgba(255, 228, 196, 0);
@@ -16,10 +16,12 @@ body{
     line-height: 200%;
 }
 a{
-    color: white;
+    font-weight: bold;
+    color: rgb(255, 5, 205);
 }
 a:hover{
-    color: grey;
+    font-weight: bold;
+    color: rgb(154, 21, 129);
 }
 th{
     text-decoration: none;
@@ -36,16 +38,10 @@ tr{
     border: 2px solid white;
     padding: 6px 12px;
 }
-.parallax {
-  /* The image used */
-  background-image: url("https://i1.sndcdn.com/artworks-000245294642-gnfq32-t1080x1080.jpg");
-    padding:0px;
-  /* Full height */
-  height: 100%;
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+select{
+    font-size:100%;
+}
+input{
+    font-size:100%;
 }
