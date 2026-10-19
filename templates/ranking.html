@@ -8,9 +8,10 @@
 <body>
 
 <div class="container">
-<a href="/">Back to search</a>
+<a href="/">Back to search</a> <!-- link back to home pages -->
+    <!-- table headings below comment -->
     <table><th class="top">name</th> <th class="top">popularity</th> <th class="top">aura levels</th> <th class="top">active</th> <th class="top">country</th>
-    {% for rank in ranks %}
+    {% for rank in ranks %} <!-- jinja code that creates the dynamic data table -->
     <tr>
         <th>{{ rank[0] }}</th>
         <th>{{ rank[1] }}</th>

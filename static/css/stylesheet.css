@@ -1,27 +1,26 @@
-@import url('https://googleapis.com');
-@import url('https://db.onlinewebfonts.com/c/ec478fc73747085c0b7028c642d992b1?family=Aller+Bold+V1');
+@import url('https://googleapis.com');  /* import googleapi so more fonts are available to use */
 
 body{
-    background-image: url("https://raw.githubusercontent.com/23092-lab/website/refs/heads/main/static/bg.jpeg");
+    background-image: url("https://raw.githubusercontent.com/23092-lab/website/refs/heads/main/static/bg.jpeg"); /* main background image of the website on both pages */
     background-size: cover;
-    font-family: "JetBrains Mono",monospace;
-    color:white;
-    font-size: 200%;
+    font-family: "JetBrains Mono",monospace; /* font chosen */
+    color:white; /* white to contrast on darker page background */
+    font-size: 200%; /* increased font size so everything is larger and easier to use without zooming in */
 }
 .container{
     background: rgba(255, 228, 196, 0);
     display: grid;
-    justify-content: center;
+    justify-content: center; /* all items inside of the container are aligned to the centre of the page */
     padding: 10%;
     line-height: 200%;
 }
 a{
     font-weight: bold;
-    color: rgb(255, 5, 205);
+    color: rgb(255, 5, 205); /* specific bright colour to contrast the standard white text and dark background */
 }
 a:hover{
     font-weight: bold;
-    color: rgb(154, 21, 129);
+    color: rgb(154, 21, 129); /* as above */
 }
 th{
     text-decoration: none;
@@ -40,7 +39,7 @@ tr{
 }
 
 select{
-    font-size:100%;
+    font-size:100%; /* increased font size of the text box and all selectors so users do not need to zoom in on the page to use it*/
 }
 input{
     font-size:100%;

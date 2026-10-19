@@ -13,8 +13,8 @@
         <br>
         <br>
          Search the database (with or without country):
-        <form method="post" action="/search">
-                <select name="country" id="country" class="select">
+        <form method="post" action="/search"> <!-- everything inside is a filter to be sent to the python script -->
+                <select name="country" id="country" class="select"> <!-- drop down for country -->
                     <option value="">All Countries</option>
                     <option value="🇰🇷">South Korea 🇰🇷</option>
                     <option value="🇨🇦">Canada 🇨🇦</option>
@@ -25,12 +25,12 @@
                     <option value="🇵🇱">Poland🇵🇱</option>
                     <option value="🇩🇪">Germany 🇩🇪</option>
                 </select>
-            <select name="sort" id="sort">
+            <select name="sort" id="sort">  <!-- drop down for popularity sorting -->
                  <option value="asc">Ascending popularity</option>
                 <option value="desc">Descending popularity</option>
             </select>
             <br>
-            <input type="text" name="search" id="search">
+            <input type="text" name="search" id="search"> <!-- searching text box-->
             <input type="submit" value="search">
         </form>
     </div>
